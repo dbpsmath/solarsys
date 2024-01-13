@@ -1,0 +1,58 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    /* Items spaced on the same line */
+    align-items: center;
+    height: 7vw;
+    width: 100%;
+    padding: 0 1%;
+    z-index: 5;
+    text-align: center;
+}
+
+/* Add this style to align logo and heading */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 2vw;
+    font-weight: 800;
+    margin-left: 10px;
+    /* Adjust margin as needed */
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    /* Adjust margin as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    font-size: 1.2vw;
+    margin: 0 1.5vw;
+}
+
+nav ul li a:hover {
+    color: #2c7ffc;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}

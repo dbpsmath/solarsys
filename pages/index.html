@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .left, .right {
+            background-color: rgba(0, 0, 0, 0.287);
+            backdrop-filter: blur(5px);
+            width: 700px; /* Adjust the width as needed */
+            height: 400px; /* Adjust the height as needed */
+            border-radius: 15px; /* Adjust the border-radius to control the roundness */
+            overflow: hidden; /* Ensure that the content inside doesn't overflow */
+        }
+        
+        .left {
+            margin-right: 130px; /* Adjust the margin to add space between sections for the left box */  
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+        }
+
+        .right {
+            margin: 0 auto; /* Center the box horizontally */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+        }
+
+        .right h1 {
+            margin-bottom: 20px; /* Add some spacing between the title and the list */
+        }
+
+        .right li {
+            margin-bottom: 20px;
+            margin: 5px 0;
+        }
+
+        #changelogList {
+            list-style: none; /* Remove bullets */
+            padding: 0; /* Remove default padding */
+            text-align: center; /* Center text horizontally */
+        }
+
+        .left h1 {
+            margin-bottom: 20px; /* Add some spacing between the title and the list */
+        }
+
+        .left li {
+            /* Additional styles for dynamically generated list items */
+            margin: 5px 0; /* Adjust the margin for spacing between items */
+        }
+
+        .center-container {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    {{navbar}}
+    <div class="center-container">
+        <div class="left">
+            <h1>Changelog Entries:</h1>
+            <ul id="changelogList">
+                <!-- Dynamic list items will be added here -->
+            </ul>
+        </div>
+        <div class="right">
+            <h1>solar system</h1>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
+    <script type="module" src="/js/renderChangelog.js"></script>
+</body>
+</html>

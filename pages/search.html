@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/uv/ev.bundle.js"></script>
+    <style>
+        input[type="submit"] {
+            display: inline-block;
+            outline: none;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1;
+            border-radius: 500px;
+            transition-property: background-color,border-color,color,box-shadow,filter;
+            transition-duration: .3s;
+            border: 1px solid transparent;
+            letter-spacing: 2px;
+            min-width: 160px;
+            text-transform: uppercase;
+            white-space: normal;
+            font-weight: 700;
+            text-align: center;
+            padding: 16px 14px 18px;
+            color: #fff;
+            background-color: #15883e;
+            height: 48px;
+        }
+        input {
+            z-index: 100;
+            background-color: #222222;
+            border: none;
+            border-radius: 0.5vw 0 0 0.5vw;
+            /* Reduced border-radius */
+            color: #fff;
+            font-size: 1vw;
+            /* Reduced font size */
+            font-weight: 600;
+            padding: 0.5vw 1vw;
+            /* Reduced padding */
+            font-family: 'Montserrat', sans-serif;
+            z-index: 1;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    {{navbar}}
+    <div class="center-container">
+        <form onsubmit="event.preventDefault(); enter();">
+            <input type="text" class="searchInput">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        async function checkScriptsLoaded() {
+            if (Easyviolet.scriptsLoaded) {
+                await Easyviolet.registerSW();
+                console.log("Scripts loaded");
+                return true;
+            } else {
+                console.log("Scripts not loaded yet");
+                return false;
+            }
+        }
+
+        async function enter() {
+            const scriptsLoaded = await checkScriptsLoaded();
+
+            if (scriptsLoaded) {
+                const searchInput = document.querySelector(".searchInput");
+                const searchValue = searchInput.value.trim();
+
+                if (searchValue.length > 0) {
+                    if (searchValue.startsWith("http")) {
+                        window.location.href = Easyviolet.getProxiedUrl(searchValue);
+                    } else {
+                        window.location.pathname = Easyviolet.getProxiedUrl(`https://www.google.com/search?q=${searchValue}`);
+                    }
+                }
+            }
+        }
+
+        // Check scripts loaded periodically
+        setInterval(checkScriptsLoaded, 1000);
+    </script>
+
+</body>
+</html>

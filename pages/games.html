@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    {{navbar}}
+    <br><br><br><br><br><br>
+    
+    <div class="search">
+        <input type="text" placeholder="Search..." oninput="" />
+        <button><i class="fas fa-search"></i></button>
+    </div>
+    <div class="popular-section">
+      <h2 style="text-align: center;">Popular Games</h2>
+      <div class="popular-gallery" id="popular-gallery">
+          <!-- Dynamic popular games content will be inserted here -->
+      </div>
+    </div>
+    <h2 style="text-align: center;">All Games</h2>
+    <div class="image-gallery" id="dynamic-gallery">
+        <!-- Dynamic content will be inserted here -->
+    </div>
+
+    <script src="/js/search.js"></script>
+    <script src="/api/games"></script>
+    <script src="/js/renderGamesPage.js"></script>
+</body>
+</html>

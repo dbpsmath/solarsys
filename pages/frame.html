@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #gameInfo {
+            position: relative;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    {{navbar}}
+    <br><br><br><br><br><br><br>
+    <div class="circle"> 
+        <iframe width="640" height="480" src="" frameborder="0" allowfullscreen id="frame"></iframe>
+        <div id="sidebar">
+            <br><br><br><br><br><br><br><br>
+            <div style="display: flex;">
+                <img src="" alt="" width="80" height="80" id="gameImage">
+                <h1 style="display:inline" id="gameTitle"></h1>
+            </div>
+            
+            <p id="gameDescription"></p>
+            <div id="menubtns" style="text-align: center;">
+                <a href="./games">
+                  <button onclick="window.location.href = '/'">
+                    <i class="fas fa-arrow-left"></i>
+                  </button>
+                </a>
+                <button onclick="document.querySelector('iframe').requestFullscreen()">
+                  <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="gameInfo">
+    </div>
+    <script src="/js/index.js"></script>
+    <script src="/api/games"></script>
+    <script src="/js/load.js"></script>
+</body>
+</html>

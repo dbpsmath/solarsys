@@ -1,0 +1,108 @@
+.circle>iframe {
+    width: 1280px;
+    height: 720px;
+    -moz-border-radius: 5%;
+    -webkit-border-radius: 5%;
+    border-radius: 5%;
+}
+
+.content {
+    position: relative;
+}
+
+#sidebar {
+    width: 250px;
+    margin-right: 90px;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#sidebarcontents {
+    padding: 5px 0px 5px 0px;
+}
+
+#gameImage {
+    border-radius: 35%;
+}
+
+/* Style for the image gallery container */
+.image-gallery {
+    position: relative;
+    z-index: 2;
+    /* or any value higher than the z-index of #vanta-bg */
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.popular-gallery {
+    position: relative;
+    z-index: 2;
+    /* or any value higher than the z-index of #vanta-bg */
+    overflow: visible;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style for the image container */
+.image-container {
+    z-index: 100;
+    text-align: center;
+    margin: 10px;
+    /* Add some spacing between images */
+}
+
+/* Style for the image with a white border and rounded corners */
+.rounded-image {
+    z-index: 100;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    max-width: 150px;
+    /* Adjust the image size as needed */
+}
+
+/* Style for the caption */
+.caption {
+    z-index: 100;
+    text-align: center;
+    color: #fff;
+}
+
+/* Style for the hyperlink (normal text) */
+.normal-link {
+    z-index: 100;
+    text-decoration: none;
+    color: #000;
+    /* Black color for the text */
+}
+
+#menubtns button {
+    border: 3px solid white;
+    font-family: "DM Sans";
+    padding: 7px 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    opacity: 0.7;
+    transition: 0.4s all;
+    margin: 5px 5px;
+}
+
+#gameInfo #menubtns {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+}
