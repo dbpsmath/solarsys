@@ -109,6 +109,17 @@ const gameJSON = [
         id: "paperio2",
         title: "Paper.io 2",
         image: "cdn/paperio2/images/icon512.png",
-        url: "cdn/paperio2/index.html"
+        url: "cdn/paperio2/index.html",
+        description: "yes, the multiplayer is fake. it is just bots"
+    }, {
+        id: "papaspizzaria",
+        title: "Papa's Pizzeria",
+        image: "cdn/papaspizzaria/papaspizzaria.jpg",
+        url: "cdn/papaspizzaria/index.html"
+    }, {
+        id: "papasburgeria",
+        title: "Papa's Burgeria",
+        image: "cdn/papasburgeria/splash.jpg",
+        url: "cdn/papasburgeria/index.html"
     }
 ]
