@@ -4,6 +4,8 @@
 
 body {
     background-image: url(/img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     margin: 0;
     /* Remove default body margin */

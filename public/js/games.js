@@ -76,7 +76,7 @@ const gameJSON = [
     }, {
         id: "discord",
         title: "Discord",
-        image: "apps/discord.png",
+        image: "cdn/discord/discord.png",
         url: 'uv/service/https%3A%2F%2Fdiscord.com%2Fapp',
         app: true
     }, {
