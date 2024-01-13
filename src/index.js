@@ -67,8 +67,8 @@ app.use((req, res) => {
   }
 });
 
-const server = app.listen(configJS.port, () => {
-  console.log(`Your server is running on port ${server.address().port}, using NodeJS version ${process.version}\n127.0.0.1:${server.address().port}`);
+const server = app.listen(process.env.PORT || configJS.port, () => {
+  console.log(`Your server is running on port ${server.address().port || process.env.PORT}, using NodeJS version ${process.version}`);
 });
 
 ultraviolet.httpServer(server);
