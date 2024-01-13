@@ -2,9 +2,9 @@
 
 // Define a constant with an array
 const changelogEntries = [
-    'Version 1.0 - Initial release',
-    'Version 1.1 - Bug fixes and improvements',
-    'Version 2.0 - New features added'
+    'Version 0.1 - Initial beta',
+    'Version 0.5 - A bit of improvements',
+    'Version 0.7 - Almost to 1.0.',
 ];
 
 // Export the constant to make it accessible in other files

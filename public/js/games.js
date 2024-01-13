@@ -93,7 +93,7 @@ const gameJSON = [
     }, {
         id: "run2",
         title: "Run 2",
-        image: "cdn/run2/Run2.png",
+        image: "cdn/run2/Run2.jpg",
         url: "cdn/run2/index.html"
     }, {
         id: "ovo",

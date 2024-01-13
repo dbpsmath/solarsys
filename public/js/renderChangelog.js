@@ -4,7 +4,7 @@
 import changelogEntries from './changelog.js';
 
 // Use the most recent 12 entries
-const recentEntries = changelogEntries.slice(-12);
+const recentEntries = changelogEntries.slice(-5);
 
 // Use the changelogEntries array
 console.log('Most Recent Changelog Entries:');
