@@ -72,7 +72,7 @@ const gameJSON = [
         id: "roblox",
         title: "Roblox",
         image: "cdn/roblox/roblox.png",
-        url: "cdn/roblox/index.html",
+        url: "/uv/service/https%3A%2F%2Fnow.gg%2Fapps%2Froblox-corporation%2F5349%2Froblox.html",
     }, {
         id: "discord",
         title: "Discord",
@@ -105,5 +105,10 @@ const gameJSON = [
         title: "OvO 2",
         image: "cdn/ovo2/icons/icon-512.png",
         url: "cdn/ovo2/index.html"
+    }, {
+        id: "paperio2",
+        title: "Paper.io 2",
+        image: "cdn/paperio2/images/icon512.png",
+        url: "cdn/paperio2/index.html"
     }
 ]
