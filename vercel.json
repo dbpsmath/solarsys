@@ -1,21 +1,17 @@
 {
     "version": 2,
     "functions": {
-        "apiRoutes": {
-            "memory": 1024
-        },
-        "pageRoutes": {
-            "memory": 1024
-        }
+        "apiRoutes": "src/api.js",
+        "pageRoutes": "src/pages.js"
     },
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "src/api.js"
+            "dest": ".vercel/functions/apiRoutes"
         },
         {
             "src": "/(.*)",
-            "dest": "src/index.js"
+            "dest": ".vercel/functions/pageRoutes"
         }
     ]
 }
