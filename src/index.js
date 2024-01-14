@@ -9,14 +9,8 @@ import fetch from 'node-fetch';
 import pageRoutes from './pages.js';
 import apiRoutes from './api.js';
 import cors from 'cors';
-import serverless from "serverless-http";
 // reading the config file and taking partials.
 const configJS = JSON.parse(fs.readFileSync('radiation.config.json'));
-const navbar = fs.readFileSync('./partials/navbar.html', 'utf8');
-const meta = fs.readFileSync('./partials/meta.html', 'utf8');
-
-
-
 // creating the express app.
 const app = express();
 
@@ -29,6 +23,10 @@ const ultraviolet = new Easyviolet({
 });
 // this __dirname value will be used later
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
+const navbar = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/navbar.html')), 'utf8');
+const meta = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/meta.html')), 'utf8');
+
 
 pageRoutes(app);
 apiRoutes(app);
