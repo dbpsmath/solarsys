@@ -2,11 +2,11 @@
     "version": 2,
     "functions": {
         "apiRoutes": {
-            "handler": "src/api.js",
+            "runtime": "nodejs14.x",
             "memory": 1024
         },
         "pageRoutes": {
-            "handler": "src/pages.js",
+            "runtime": "nodejs14.x",
             "memory": 1024
         }
     },
