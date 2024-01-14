@@ -69,11 +69,6 @@ const gameJSON = [
         image: "cdn/eggycar/gameicon.png",
         url: "cdn/eggycar/index.html"
     }, {
-        id: "roblox",
-        title: "Roblox",
-        image: "cdn/roblox/roblox.png",
-        url: "/uv/service/https%3A%2F%2Fnow.gg%2Fapps%2Froblox-corporation%2F5349%2Froblox.html",
-    }, {
         id: "discord",
         title: "Discord",
         image: "cdn/discord/discord.png",
@@ -82,8 +77,8 @@ const gameJSON = [
     }, {
         id: "subway",
         title: "Subway Surfers",
-        image: "cdn/subway-surfers/subway.png",
-        url: "cdn/subway-surfers/index.html",
+        image: "cdn/subway/subway.png",
+        url: "cdn/subway/index.html",
         popular: true
     }, {
         id: "slope",
