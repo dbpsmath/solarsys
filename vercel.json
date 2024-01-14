@@ -1,8 +1,14 @@
 {
     "version": 2,
     "functions": {
-        "apiRoutes": "src/api.js",
-        "pageRoutes": "src/pages.js"
+        "apiRoutes": {
+            "handler": "src/api.js",
+            "memory": 1024
+        },
+        "pageRoutes": {
+            "handler": "src/pages.js",
+            "memory": 1024
+        }
     },
     "routes": [
         {
