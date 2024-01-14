@@ -11,8 +11,13 @@ import apiRoutes from './api.js';
 import cors from 'cors';
 // reading the config file and taking partials.
 const configJS = JSON.parse(fs.readFileSync('radiation.config.json'));
-const navbar = fs.readFileSync('./partials/navbar.html', 'utf8');
-const meta = fs.readFileSync('./partials/meta.html', 'utf8');
+if (__dirname.endsWith('src')) {
+  const navbar = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/navbar.html')), 'utf8');
+  const meta = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/meta.html')), 'utf8');
+} else {
+  const navbar = fs.readFileSync('./partials/navbar.html', 'utf8');
+  const meta = fs.readFileSync('./partials/meta.html', 'utf8');
+}
 
 
 
