@@ -5,7 +5,7 @@ import cors from 'cors';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const apiRoutes = (app) => {
-    app.get("/api/games", (req, res) => {
+    /* app.get("/api/games", (req, res) => {
         if (__dirname.endsWith('src\\')) {
             res.contentType('text/javascript');
             res.sendFile(path.resolve(path.join(__dirname, '../public/js/games.js')));
@@ -13,7 +13,7 @@ const apiRoutes = (app) => {
             res.contentType('text/javascript');
             res.sendFile(path.resolve(path.join(__dirname, './public/js/games.js')));
         }
-    });
+    }); */
 
     app.get("/api/changelog", (req, res) => {
         if (__dirname.endsWith('src\\')) {
