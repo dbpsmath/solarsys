@@ -2,11 +2,11 @@
     "version": 2,
     "functions": {
         "apiRoutes": {
-            "runtime": "nodejs14.x",
+            "runtime": "@vercel/node",
             "memory": 1024
         },
         "pageRoutes": {
-            "runtime": "nodejs14.x",
+            "runtime": "@vercel/node",
             "memory": 1024
         }
     },
