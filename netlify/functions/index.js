@@ -9,7 +9,6 @@ import fetch from 'node-fetch';
 import pageRoutes from './pages.js';
 import apiRoutes from './api.js';
 import cors from 'cors';
-import serverless from "serverless-http";
 // reading the config file and taking partials.
 const configJS = JSON.parse(fs.readFileSync('radiation.config.json'));
 const navbar = fs.readFileSync('./partials/navbar.html', 'utf8');
