@@ -1,4 +1,4 @@
 {
-    "codec": "plain",
-    "port": 9000
+    "codec": "xor",
+    "port": 80
 }
