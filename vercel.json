@@ -18,11 +18,9 @@
     ],
     "functions": {
         "apiRoutes": {
-            "handler": "src/api.apiRoutes",
             "memory": 1024
         },
         "pageRoutes": {
-            "handler": "src/pages.pageRoutes",
             "memory": 1024
         }
     }
