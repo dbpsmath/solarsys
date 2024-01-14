@@ -32,7 +32,7 @@ const pageRoutes = (app) => {
             res.send(sendFixedData(data));
             return;
         } else {
-            let data = fs.readFileSync(path.resolve(path.join(__dirname, '../pages/index.html', 'utf8')));
+            let data = fs.readFileSync(path.resolve(path.join(__dirname, '../pages/index.html')), 'utf8');
             res.send(sendFixedData(data));
             return;
         }
