@@ -2,11 +2,9 @@
     "version": 2,
     "functions": {
         "apiRoutes": {
-            "handler": "src/api.apiRoutes",
             "memory": 1024
         },
         "pageRoutes": {
-            "handler": "src/pages.pageRoutes",
             "memory": 1024
         }
     },
@@ -18,12 +16,6 @@
         {
             "src": "/(.*)",
             "dest": "src/index.js"
-        }
-    ],
-    "builds": [
-        {
-            "src": "src/index.js",
-            "use": "@now/node-server"
         }
     ]
 }
