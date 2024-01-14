@@ -7,9 +7,9 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const apiRoutes = (app) => {
     app.get("/api/games", (req, res) => {
         if (__dirname.endsWith('src\\')) {
-            res.send(fs.readFileSync(path.resolve(path.join(__dirname, '../public/js/games.js')), 'utf8'));
+            res.sendFile(path.resolve(path.join(__dirname, '../public/js/games.js')));
         } else {
-            res.send(fs.readFileSync(path.resolve(path.join(__dirname, './public/js/games.js')), 'utf8'));
+            res.sendFile(path.resolve(path.join(__dirname, './public/js/games.js')));
         }
     });
     app.get("/api/changelog", (req, res) => {
