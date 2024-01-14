@@ -14,7 +14,7 @@ import cors from 'cors';
 // reading the config file and taking partials.
 
 if (__dirname.endsWith('src')) {
-  const configJS = JSON.parse(fs.readFileSync(path.resolve(path.join(__dirname, '../config.json')), 'utf8'));
+  const configJS = JSON.parse(fs.readFileSync(path.resolve(path.join(__dirname, '../radiation.config.json')), 'utf8'));
   const navbar = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/navbar.html')), 'utf8');
   const meta = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/meta.html')), 'utf8');
 } else {
