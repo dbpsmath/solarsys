@@ -10,11 +10,13 @@ import pageRoutes from './pages.js';
 import apiRoutes from './api.js';
 import cors from 'cors';
 // reading the config file and taking partials.
-const configJS = JSON.parse(fs.readFileSync('radiation.config.json'));
+
 if (__dirname.endsWith('src')) {
+  const configJS = JSON.parse(fs.readFileSync(path.resolve(path.join(__dirname, '../config.json')), 'utf8'));
   const navbar = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/navbar.html')), 'utf8');
   const meta = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/meta.html')), 'utf8');
 } else {
+  const configJS = JSON.parse(fs.readFileSync('./radiation.config.json', 'utf8'));
   const navbar = fs.readFileSync('./partials/navbar.html', 'utf8');
   const meta = fs.readFileSync('./partials/meta.html', 'utf8');
 }
