@@ -2,20 +2,22 @@
     "version": 2,
     "functions": {
         "apiRoutes": {
+            "handler": "src/api.js",
             "memory": 1024
         },
         "pageRoutes": {
+            "handler": "src/pages.js",
             "memory": 1024
         }
     },
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "src/api.js"
+            "dest": ".vercel/functions/apiRoutes"
         },
         {
             "src": "/(.*)",
-            "dest": "src/index.js"
+            "dest": ".vercel/functions/pageRoutes"
         }
     ]
 }
