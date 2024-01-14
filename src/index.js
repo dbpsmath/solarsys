@@ -7,6 +7,8 @@ import fs from 'node:fs';
 import mime from 'mime';
 import fetch from 'node-fetch';
 import pageRoutes from './pages.js';
+// this __dirname value will be used later
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 import apiRoutes from './api.js';
 import cors from 'cors';
 // reading the config file and taking partials.
@@ -33,8 +35,6 @@ app.set('view engine', 'html');
 const ultraviolet = new Easyviolet({
   codec: configJS.codec
 });
-// this __dirname value will be used later
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 pageRoutes(app);
 apiRoutes(app);
