@@ -1,3 +1,0 @@
-[functions]
-  external_node_modules = ["github:Russell2259/Easyviolet", "express", "cors"]
-  node_bundler = "esbuild"

@@ -3,13 +3,27 @@
     "builds": [
         {
             "src": "src/index.js",
-            "use": "@vercel/node"
+            "use": "@now/node-server"
         }
     ],
     "routes": [
         {
+            "src": "/api/(.*)",
+            "dest": "/src/api.js"
+        },
+        {
             "src": "/(.*)",
-            "dest": "src/index.js"
+            "dest": "/src/index.js"
         }
-    ]
+    ],
+    "functions": {
+        "apiRoutes": {
+            "handler": "src/api.apiRoutes",
+            "memory": 1024
+        },
+        "pageRoutes": {
+            "handler": "src/pages.pageRoutes",
+            "memory": 1024
+        }
+    }
 }
