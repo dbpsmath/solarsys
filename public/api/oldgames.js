@@ -45,7 +45,6 @@ const gameJSON = [
     }, {
         id: "ltf3",
         title: "Learn to Fly 3",
-        thisisjusttotriggervercelrebuidl: true,
         image: "cdn/ltf3/logo.png",
         url: "cdn/ltf3/index.html",
         popular: true
