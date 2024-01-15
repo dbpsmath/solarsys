@@ -64,6 +64,10 @@ app.get('/cdn/*', cors({
 
 
     const noRewrite = ['.unityweb'];
+    if (!mime.getType(reqTarget)) {
+      if (reqTarget.endsWith('.unityweb')) res.setHeader('content-type', 'application/octet-stream');
+      if (reqTarget.endsWith('.wasm')) res.setHeader('content-type', 'application/wasm');
+    }
     if (!noRewrite.includes(mime.getType(reqTarget))) res.writeHead(200, {
       'content-type': mime.getType(reqTarget)
     });
