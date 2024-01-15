@@ -68,8 +68,6 @@ app.get('/cdn/*', cors({
       'content-type': mime.getType(reqTarget)
     });
 
-    if (mime.getType(reqTarget) === 'text/html') data = data + '<script src=\'/assets/js/cdn.inject.js\' preload=\'true\'></script>';
-
     res.end(data);
   } else next();
 });
