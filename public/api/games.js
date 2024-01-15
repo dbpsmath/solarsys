@@ -77,7 +77,7 @@ const gameJSON = [
     }, {
         id: "subway",
         title: "Subway Surfers",
-        image: "cdn/subway/subway.png",
+        image: "cdn/subway/img/splash.jpg",
         url: "cdn/subway/index.html",
         popular: true
     }, {
