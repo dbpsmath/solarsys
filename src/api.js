@@ -4,6 +4,8 @@ import path from 'node:path';
 import cors from 'cors';
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
+// rebuild
+
 const apiRoutes = (app) => {
     /* app.get("/api/games", (req, res) => {
         if (__dirname.endsWith('src\\')) {
