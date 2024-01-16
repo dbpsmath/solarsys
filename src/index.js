@@ -14,19 +14,9 @@ import apiRoutes from './api.js';
 import cors from 'cors';
 // reading the config file and taking partials.
 
-let configJS;
-let navbar;
-let meta;
-
-if (__dirname.endsWith('src\\')) {
-  configJS = JSON.parse(fs.readFileSync(path.resolve(path.join(__dirname, '../radiation.config.json')), 'utf8'));
-  navbar = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/navbar.html')), 'utf8');
-  meta = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/meta.html')), 'utf8');
-} else {
-  configJS = JSON.parse(fs.readFileSync('./radiation.config.json', 'utf8'));
-  navbar = fs.readFileSync('./partials/navbar.html', 'utf8');
-  meta = fs.readFileSync('./partials/meta.html', 'utf8');
-}
+const configJS = JSON.parse(fs.readFileSync(path.resolve(path.join(__dirname, '../radiation.config.json')), 'utf8'));
+const navbar = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/navbar.html')), 'utf8');
+const meta = fs.readFileSync(path.resolve(path.join(__dirname, '../partials/meta.html')), 'utf8');
 
 
 
@@ -64,10 +54,7 @@ app.get('/cdn/*', cors({
 
 
     const noRewrite = ['.unityweb'];
-    if (!mime.getType(reqTarget)) {
-      if (reqTarget.endsWith('.unityweb')) res.setHeader('content-type', 'application/octet-stream');
-      if (reqTarget.endsWith('.wasm')) res.setHeader('content-type', 'application/wasm');
-    }
+
     if (!noRewrite.includes(mime.getType(reqTarget))) res.writeHead(200, {
       'content-type': mime.getType(reqTarget)
     });
